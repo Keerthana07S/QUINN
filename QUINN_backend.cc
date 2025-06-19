@@ -153,6 +153,7 @@ void copyMatrix(Complex source[4][4], Complex dest[4][4]) {
       dest[i][j] = source[i][j];
 }
 
+//we use this function to multiply matrices together!
 void multiplyMatrix(Complex gate[4][4], Complex mat[4][4]) {
   Complex temp[4][4];
   for (int i = 0; i < 4; i++) {
