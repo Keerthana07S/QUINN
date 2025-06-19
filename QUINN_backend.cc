@@ -1,3 +1,8 @@
+//author: keerthana srinivasan
+//date: June 17, 2025
+//description: this code allows for classic quantum gates and identity matrices to be mapped as colors using NeoPixels after multiplication
+
+
 #include <Adafruit_NeoPixel.h>
 #include <Complex.h>
 
@@ -82,11 +87,11 @@ void loop() {
     for (int col = 0; col < 3; col++) {
       int val = result[row][col];
       if (val == 1) {
-        strip.setPixelColor(ledIndex, strip.Color(0, 255, 0)); //green
+        strip.setPixelColor(ledIndex, strip.Color(230, 150, 222)); //pink
       } else if (val == -1) {
-        strip.setPixelColor(ledIndex, strip.Color(255, 0, 0)); //red
+        strip.setPixelColor(ledIndex, strip.Color(177, 150, 230)); //purple
       } else {
-        strip.setPixelColor(ledIndex, strip.Color(0, 0, 255)); //blue
+        strip.setPixelColor(ledIndex, strip.Color(150, 182, 230)); //blue
       }
       ledIndex++;
     }
