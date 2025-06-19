@@ -22,7 +22,8 @@ Adafruit_NeoPixel strip(NUM_LEDS, LED_PIN, NEO_GRB + NEO_KHZ800);
 //now, the activity is more fun! :)
 
 //identity matrix (usually when there isn't a gate in the quantum circuit)
-int identity[4][4] = {
+//we need to use Complex, because sometimes we deal with i which is sqrt(-1). 
+Complex identity[4][4] = {
   {1, 0, 0, 0},
   {0, 1, 0, 0},
   {0, 0, 1, 0},
@@ -30,7 +31,7 @@ int identity[4][4] = {
 };
 
 //hadamard matrix
-int hadamard[4][4] = {
+Complex hadamard[4][4] = {
   {1, 1, 1, 1},
   {1, -1, 1, -1},
   {1, 1, -1, -1},
@@ -38,7 +39,7 @@ int hadamard[4][4] = {
 };
 
 //pauli-x gate
-int xgate[4][4] = {
+Complex xgate[4][4] = {
   {0, 0, 0, 1},
   {0, 0, 1, 0},
   {0, 1, 0, 0},
@@ -46,7 +47,7 @@ int xgate[4][4] = {
 };
 
 //s gate
-int sgate[4][4] = {
+Complex sgate[4][4] = {
   {1, 0, 0, 0},
   {0, i, 0, 0},
   {0, 0, i, 0},
